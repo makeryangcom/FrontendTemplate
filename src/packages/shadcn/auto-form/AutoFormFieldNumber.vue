@@ -2,8 +2,8 @@
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/lib/registry/new-york/ui/form'
-import { Input } from '@/lib/registry/new-york/ui/input'
+import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '../form'
+import { Input } from '../input'
 
 defineOptions({
   inheritAttrs: false,

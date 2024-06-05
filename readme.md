@@ -19,6 +19,23 @@ yarn
 yarn dev
 ```
 
+## Use UI
+
+> After updating the shadcn resources, it is necessary to replace the relevant resource paths.
+
+```shell
+import { cn } from '@/lib/utils' -> import { cn } from '../utils'
+```
+
+```shell
+@/lib/registry/new-york/ui/ -> ../
+```
+
+```shell
+@/lib/registry/default/ui/ -> ../
+```
+
+
 ## Build
 
 ```shell

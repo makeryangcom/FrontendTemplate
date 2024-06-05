@@ -4,7 +4,7 @@ import { PaginationLast, type PaginationLastProps } from 'radix-vue'
 import { DoubleArrowRightIcon } from '@radix-icons/vue'
 import {
   Button,
-} from '@/lib/registry/new-york/ui/button'
+} from '../button'
 import { cn } from '../utils'
 
 const props = withDefaults(defineProps<PaginationLastProps & { class?: HTMLAttributes['class'] }>(), {
