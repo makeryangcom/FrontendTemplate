@@ -9,7 +9,7 @@ import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '
 import { Calendar } from '@/lib/registry/new-york/ui/calendar'
 import { Button } from '@/lib/registry/new-york/ui/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/lib/registry/new-york/ui/popover'
-import { cn } from '@/lib/utils'
+import { cn } from '../utils'
 
 defineProps<FieldProps>()
 

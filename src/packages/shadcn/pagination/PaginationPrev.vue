@@ -5,7 +5,7 @@ import { ChevronLeftIcon } from '@radix-icons/vue'
 import {
   Button,
 } from '@/lib/registry/new-york/ui/button'
-import { cn } from '@/lib/utils'
+import { cn } from '../utils'
 
 const props = withDefaults(defineProps<PaginationPrevProps & { class?: HTMLAttributes['class'] }>(), {
   asChild: true,

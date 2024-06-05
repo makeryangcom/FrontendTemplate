@@ -3,7 +3,7 @@ import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
     darkMode: "class",
-    content: ["./src/**/*.{vue,js,ts,jsx,tsx,md}", "./.vitepress/**/*.{vue,js,ts,jsx,tsx}"],
+    content: ["./src/**/*.{vue,js,ts,jsx,tsx,md}"],
     theme: {
         container: {
             center: true,

@@ -1,4 +1,5 @@
 {
+	"extends": "@vue/tsconfig/tsconfig.dom.json",
 	"compilerOptions": {
 		"target": "ESNext",
 		"useDefineForClassFields": true,
@@ -13,20 +14,19 @@
 		"skipLibCheck": true,
 		"sourceMap": false,
 		"noEmit": true,
-		"paths": {
-			"@/*": ["./src/*"]
-		},
 		"lib": [
 			"ESNext",
 			"DOM",
 			"DOM.Iterable"
-		]
+		],
+		"types": ["unplugin-icons/types/vue", "node", "vue"]
 	},
 	"include": [
 		"src/**/*.ts",
 		"src/**/*.d.ts",
 		"src/**/*.tsx",
-		"src/**/*.vue"
+		"src/**/*.vue",
+		"src/packages/shadcn/**/*.vue"
 	],
 	"exclude": ["node_modules"],
 	"references": [

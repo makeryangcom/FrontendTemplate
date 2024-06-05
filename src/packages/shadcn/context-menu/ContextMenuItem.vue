@@ -6,7 +6,7 @@ import {
   type ContextMenuItemProps,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { cn } from '@/lib/utils'
+import { cn } from '../utils'
 
 const props = defineProps<ContextMenuItemProps & { class?: HTMLAttributes['class'], inset?: boolean }>()
 const emits = defineEmits<ContextMenuItemEmits>()

@@ -5,7 +5,7 @@ import type { Calendar } from 'v-calendar'
 import { DatePicker } from 'v-calendar'
 import { computed, nextTick, onMounted, ref, useSlots } from 'vue'
 import { isVCalendarSlot } from '.'
-import { cn } from '@/lib/utils'
+import { cn } from '../utils'
 import { buttonVariants } from '@/lib/registry/new-york/ui/button'
 
 /* Extracted from v-calendar */
