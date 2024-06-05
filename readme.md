@@ -36,3 +36,5 @@ yarn build
 [https://tailwindcss.com](https://tailwindcss.com)
 
 [https://www.radix-ui.com](https://www.radix-ui.com)
+
+[https://www.shadcn-vue.com](https://www.shadcn-vue.com)
