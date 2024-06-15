@@ -1,15 +1,15 @@
-import {createRouter, createWebHashHistory} from "vue-router";
-import Index from "../../pages/index.vue";
+import {createRouter, createWebHistory } from "vue-router";
+import Start from "../../pages/start.vue";
 
 const routes: any = [
     {
         path: "/",
-        name: "Index",
-        component: Index
+        name: "Start",
+        component: Start
     }
 ]
 
 export const router = createRouter({
-    history: createWebHashHistory(),
+    history: createWebHistory(),
     routes: routes
-})
+});

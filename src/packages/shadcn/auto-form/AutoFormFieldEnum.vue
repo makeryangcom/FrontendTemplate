@@ -2,10 +2,10 @@
 import AutoFormLabel from './AutoFormLabel.vue'
 import { beautifyObjectName } from './utils'
 import type { FieldProps } from './interface'
-import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '../form'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../select'
-import { Label } from '../label'
-import { RadioGroup, RadioGroupItem } from '../radio-group'
+import { FormControl, FormDescription, FormField, FormItem, FormMessage } from '@/lib/registry/new-york/ui/form'
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/lib/registry/new-york/ui/select'
+import { Label } from '@/lib/registry/new-york/ui/label'
+import { RadioGroup, RadioGroupItem } from '@/lib/registry/new-york/ui/radio-group'
 
 defineProps<FieldProps & {
   options?: string[]

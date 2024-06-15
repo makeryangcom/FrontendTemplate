@@ -2,7 +2,7 @@
 import { type HTMLAttributes, computed } from 'vue'
 import { PaginationEllipsis, type PaginationEllipsisProps } from 'radix-vue'
 import { DotsHorizontalIcon } from '@radix-icons/vue'
-import { cn } from '../utils'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<PaginationEllipsisProps & { class?: HTMLAttributes['class'] }>()
 

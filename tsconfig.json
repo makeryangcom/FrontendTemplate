@@ -16,10 +16,14 @@
 		"noEmit": true,
 		"lib": [
 			"ESNext",
-			"DOM",
-			"DOM.Iterable"
+			"DOM"
 		],
-		"types": ["unplugin-icons/types/vue", "node", "vue"]
+		"types": ["unplugin-icons/types/vue", "node", "vue", "@radix-icons/vue"],
+		"paths": {
+			"@/lib/*": ["./src/packages/shadcn/*"],
+			"@/lib/registry/new-york/ui/*": ["./src/packages/shadcn/*"],
+			"@/lib/registry/default/ui/*": ["./src/packages/shadcn/*"],
+		}
 	},
 	"include": [
 		"src/**/*.ts",
@@ -28,10 +32,5 @@
 		"src/**/*.vue",
 		"src/packages/shadcn/**/*.vue"
 	],
-	"exclude": ["node_modules"],
-	"references": [
-		{
-			"path": "./tsconfig.node.json"
-		}
-	]
+	"exclude": ["node_modules"]
 }

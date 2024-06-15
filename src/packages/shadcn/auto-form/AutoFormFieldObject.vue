@@ -6,8 +6,8 @@ import AutoFormField from './AutoFormField.vue'
 import type { Config, ConfigItem, Shape } from './interface'
 import { beautifyObjectName, getBaseSchema, getBaseType, getDefaultValueInZodStack } from './utils'
 import AutoFormLabel from './AutoFormLabel.vue'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../accordion'
-import { FormItem } from '../form'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/lib/registry/new-york/ui/accordion'
+import { FormItem } from '@/lib/registry/new-york/ui/form'
 
 const props = defineProps<{
   fieldName: string

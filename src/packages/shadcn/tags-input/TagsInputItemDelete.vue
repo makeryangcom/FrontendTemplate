@@ -2,7 +2,7 @@
 import { type HTMLAttributes, computed } from 'vue'
 import { TagsInputItemDelete, type TagsInputItemDeleteProps, useForwardProps } from 'radix-vue'
 import { Cross2Icon } from '@radix-icons/vue'
-import { cn } from '../utils'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<TagsInputItemDeleteProps & { class?: HTMLAttributes['class'] }>()
 

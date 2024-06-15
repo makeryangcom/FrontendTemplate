@@ -4,8 +4,8 @@ import { PaginationPrev, type PaginationPrevProps } from 'radix-vue'
 import { ChevronLeftIcon } from '@radix-icons/vue'
 import {
   Button,
-} from '../button'
-import { cn } from '../utils'
+} from '@/lib/registry/new-york/ui/button'
+import { cn } from '@/lib/utils'
 
 const props = withDefaults(defineProps<PaginationPrevProps & { class?: HTMLAttributes['class'] }>(), {
   asChild: true,
