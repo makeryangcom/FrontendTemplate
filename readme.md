@@ -1,4 +1,4 @@
-# FrontendTemplate
+# FrontendTemplate [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ⚡ Vue3 + TypeScript + Vite Frontend Template ⚡
 
