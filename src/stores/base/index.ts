@@ -12,4 +12,17 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-export {useBaseStore} from "./base";
+import {defineStore} from "pinia";
+import {ref} from "vue";
+
+export const useBaseStore = defineStore("base", ()=>{
+    const store = ref({
+        count: 0
+    });
+
+    function $reset(){
+        store.value.count = 0;
+    }
+
+    return {store, $reset}
+})

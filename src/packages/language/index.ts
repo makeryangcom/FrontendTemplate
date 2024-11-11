@@ -23,13 +23,11 @@ const messages = {
 
 function init(){
     let lang: string = "en";
-
     if(localStorage.getItem("language")){
         lang = localStorage.getItem("language") + ""
     }else{
         localStorage.setItem("language", "en")
     }
-
     return lang
 }
 
