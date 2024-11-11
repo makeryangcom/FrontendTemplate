@@ -2,47 +2,37 @@
     <router-view ref="routerView" v-slot="{Component}">
         <component :is="Component" :data="data" />
     </router-view>
-    <Toaster ref="toaster" />
+    <Toaster ref="toaster"></Toaster>
 </template>
 
 <script setup lang="ts">
-import {onBeforeMount, onMounted, onBeforeUnmount, onUnmounted, nextTick, ref} from "vue";
+import {ref, onBeforeMount, onMounted, onBeforeUnmount, onUnmounted, nextTick} from "vue";
 import {useRoute, useRouter} from "vue-router";
-import {useDark} from "@vueuse/core";
-import {useStore} from "./packages/store";
-import {Request} from "./packages/request";
-import {ThemeColors} from "./packages/config";
-import {Toaster, useToast} from "@/lib/toast";
+import {Request, useI18n, Format} from "./packages";
+import {Toaster, useToast} from "./packages/york";
 
+const i18n = useI18n();
 const $route = useRoute();
 const $router = useRouter();
-const $store = useStore();
 const {toast} = useToast();
 
 const data: any = ref({
     route: $route,
     router: $router,
-    store: $store,
-    theme: {
-        colors: ThemeColors,
-        dark: useDark()
+    language: {
+        current: (navigator as any).language,
+        locale: i18n.locale,
+        t: i18n.t,
+        f: Format
     },
-    header: {
-        search: {
-            status: false
-        }
-    },
-    browser: {
-        toast: toast,
-        request: Request,
-    }
+    request: Request,
+    toast: toast
 });
 
 onBeforeMount(() => {});
 
 onMounted(() => {
-    document.documentElement.style.setProperty("--radius", `${$store.radius.value}rem`);
-    document.documentElement.classList.add(`theme-${$store.theme.value}`);
+    console.log("[app]", data.value);
     nextTick(() => {});
 });
 
@@ -51,9 +41,10 @@ onBeforeUnmount(() => {});
 onUnmounted(() => {});
 </script>
 
-<style>
-@import url("./assets/css/shiki.css");
-@import url("./assets/css/tailwind.css");
-@import url("./assets/css/themes.css");
-@import url("./assets/css/markdown.css");
+<style scoped>
+@import url("./assets/css/font.css");
+@import url("./assets/css/base.css");
+@import url("./assets/css/theme.css");
+@import url("./assets/css/animation.css");
+@import url("./assets/css/keyframe.css");
 </style>

@@ -1,6 +1,10 @@
 # FrontendTemplate [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-⚡ Vue3 + TypeScript + Vite Frontend Template ⚡
+⚡ Vue3 + TypeScript + Vite + Pinia Frontend Template ⚡
+
+## License
+
+[![License:Apache2.0](https://img.shields.io/badge/License-Apache2.0-yellow.svg)](https://opensource.org/licenses/Apache2.0)
 
 ## Install
 
@@ -27,6 +31,8 @@ yarn build
 ## Links & Thank
 
 [https://vuejs.org](https://vuejs.org)
+
+[https://pinia.vuejs.org](https://pinia.vuejs.org)
 
 [https://www.vite.org](https://www.vite.org)
 
