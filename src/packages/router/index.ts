@@ -13,13 +13,13 @@
 // limitations under the License.
 
 import {createRouter, createWebHistory } from "vue-router";
-import ViewIndex from "../../view/index.vue";
+import Index from "../../views/index.vue";
 
 const routes: any = [
     {
         path: "/",
-        name: "ViewIndex",
-        component: ViewIndex,
+        name: "Index",
+        component: Index,
         children:[]
     }
 ]
