@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
-import {Primitive, type PrimitiveProps} from "radix-vue";
-import {OctagonAlert} from "lucide-vue-next";
-import {Merge} from "../utils.ts";
+import { OctagonAlert } from "lucide-vue-next";
+import { Primitive, type PrimitiveProps } from "radix-vue";
+import type { HTMLAttributes } from "vue";
 
 interface Props extends PrimitiveProps {
     class?: HTMLAttributes["class"]

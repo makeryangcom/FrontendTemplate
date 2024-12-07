@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {type HTMLAttributes, computed} from "vue";
-import {TooltipContent, type TooltipContentEmits, type TooltipContentProps, TooltipPortal, useForwardPropsEmits} from "radix-vue";
-import {Merge} from "../utils.ts";
+import { TooltipContent, type TooltipContentEmits, type TooltipContentProps, TooltipPortal, useForwardPropsEmits } from "radix-vue";
+import { type HTMLAttributes, computed } from "vue";
+import { Merge } from "../utils.ts";
 
 defineOptions({
     inheritAttrs: false,

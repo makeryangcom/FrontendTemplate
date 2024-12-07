@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {type HTMLAttributes, computed} from "vue";
-import {DialogClose, DialogContent, type DialogContentEmits, type DialogContentProps, DialogOverlay, DialogPortal, useForwardPropsEmits} from "radix-vue";
-import {Cross2Icon} from "@radix-icons/vue";
-import {Merge} from "../utils.ts";
+import { Cross2Icon } from "@radix-icons/vue";
+import { DialogClose, DialogContent, type DialogContentEmits, type DialogContentProps, DialogOverlay, DialogPortal, useForwardPropsEmits } from "radix-vue";
+import { type HTMLAttributes, computed } from "vue";
+import { Merge } from "../utils.ts";
 
 const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<DialogContentEmits>()
