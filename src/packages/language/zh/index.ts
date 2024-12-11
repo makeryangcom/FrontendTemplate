@@ -12,4 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-export { useLanguagePackage } from "./language";
+export default {
+    base: {
+        click: "点击",
+        reset: "重置"
+    },
+    header: {
+        search: {
+            placeholder: "搜索关键词..."
+        },
+        theme: {
+            title: "定制主题",
+            describe: "选择你喜欢的样式和颜色",
+            color: "颜色",
+            radius: "圆角",
+            style: "样式"
+        }
+    },
+    common: {
+        no_relevant_data_available: "没有相关数据"
+    }
+}

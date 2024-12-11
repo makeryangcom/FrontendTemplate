@@ -7,11 +7,12 @@
 
 <script setup lang="ts">
 import { nextTick, onBeforeMount, onBeforeUnmount, onMounted, onUnmounted, ref } from "vue";
+import { useLanguagePackage } from "./packages";
 import { Toaster, useToast } from "./packages/york";
-import { useBaseStore, useLanguageStore, useRequestStore, useThemeStore } from "./stores";
+import { useBaseStore, useRequestStore, useThemeStore } from "./stores";
 
 const base = useBaseStore();
-const language = useLanguageStore();
+const language = useLanguagePackage();
 const request = useRequestStore();
 const theme = useThemeStore();
 const {toast} = useToast();
@@ -49,9 +50,8 @@ onMounted(() => {
     document.documentElement.style.setProperty("--radius", `${data.value.theme.api.radius}rem`);
     document.documentElement.classList.add(`theme-${data.value.theme.api.theme}`);
     nextTick(() => {
-        console.log("author:" + (window as any).base.author, "language:" + data.value.tools.language.current);
-        console.log((window as any).base.name + ":" + (window as any).base.version  + " Platform:" + (window as any).base.platform() + " Electron:" + (window as any).base.versions.electron() + " Chromium:" + (window as any).base.versions.chrome() + " Node:" + (window as any).base.versions.node());
-        console.log("app:" + (window as any).base.paths.app(process) + " roaming:" + (window as any).base.paths.roaming(process) + " home:" + (window as any).base.paths.home(process) + " temp:" + (window as any).base.paths.temp(process));
+        console.log("product:" + data.value.base.api.$GetProduct(), "version:" + data.value.base.api.$GetVersion(), "platform:" + data.value.base.api.$GetPlatform(), "language:" + data.value.tools.language.current);
+        console.log("author:" + data.value.base.api.$GetAuthor());
         console.log("[template:app]", data.value);
         if(data.value.tools.language.locale === "null"){
             if(data.value.tools.language.current === "zh-CN"){

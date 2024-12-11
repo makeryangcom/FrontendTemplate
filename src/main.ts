@@ -15,7 +15,7 @@
 import { createPinia } from "pinia";
 import { createApp } from "vue";
 import App from "./app.vue";
+import { useLanguagePackage } from "./packages";
 import { Router as router } from "./routers";
-import { useLanguageStore } from "./stores";
 
-createApp(App).use(router).use(createPinia()).use(useLanguageStore().$Store.api).mount("#app");
+createApp(App).use(router).use(createPinia()).use(useLanguagePackage().$Store.api).mount("#app");

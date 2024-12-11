@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import {fileURLToPath, URL} from "node:url";
-import {defineConfig} from "vite";
 import vue from "@vitejs/plugin-vue";
-import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
+import { fileURLToPath, URL } from "node:url";
+import tailwind from "tailwindcss";
+import { defineConfig } from "vite";
 import vueDevTools from "vite-plugin-vue-devtools";
 import Package from "./package.json";
 
@@ -38,7 +38,7 @@ export default defineConfig(({mode})=> ({
 		__APP_VERSION__: JSON.stringify(Package.version),
     },
     esbuild: {
-        drop: mode === "production" ? ["console", "debugger"] : [],
+        drop: mode === "production" ? ["debugger"] : [],
     },
     plugins: [
         vue(

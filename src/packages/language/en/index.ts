@@ -12,4 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-export { useLanguagePackage } from "./language";
+export default {
+    base: {
+        click: "Click",
+        reset: "Reset"
+    },
+    header: {
+        search: {
+            placeholder: "search keywords..."
+        },
+        theme: {
+            title: "Custom Theme",
+            describe: "Choose your preferred style and color",
+            color: "Color",
+            radius: "Radius",
+            style: "Style"
+        }
+    },
+    common: {
+        no_relevant_data_available: "No relevant data available"
+    }
+}

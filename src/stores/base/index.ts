@@ -15,11 +15,24 @@
 import { defineStore } from "pinia";
 import { ref } from "vue";
 import { useRoute as $useRoute, useRouter as $useRouter } from "vue-router";
+import * as PackageJson from "../../../package.json";
 
 export const useBaseStore = defineStore("base", ()=>{
     const $Store = ref({
         count: 0
     });
+
+    function $GetProduct(){
+        return PackageJson.name;
+    }
+
+    function $GetVersion(){
+        return PackageJson.version;
+    }
+
+    function $GetAuthor(){
+        return PackageJson.author;
+    }
 
     function $GetPlatform(){
         const userAgent = (navigator as any).userAgent;
@@ -48,5 +61,5 @@ export const useBaseStore = defineStore("base", ()=>{
         $Store.value.count = 0;
     }
 
-    return {$Store, $useRoute, $useRouter, $GetPlatform, $RemoveTrim, $CheckEmail, $Reset}
+    return {$Store, $useRoute, $useRouter, $GetProduct, $GetVersion, $GetAuthor, $GetPlatform, $RemoveTrim, $CheckEmail, $Reset}
 });
